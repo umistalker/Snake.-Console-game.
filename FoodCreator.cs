@@ -11,22 +11,22 @@ namespace Csharp
 {
     public class FoodCreator
     {
-        int mapWidht;
+        int mapWidth;
         int mapHeight;
         char sym;
 
         Random random = new Random();
 
-        public FoodCreator ( int mapWidht, int mapHeight, char sym)
+        public FoodCreator ( int mapWidth, int mapHeight, char sym)
         {
-            this.mapWidht = mapWidht;
+            this.mapWidth = mapWidth;
             this.mapHeight = mapHeight;
             this.sym = sym;
         }
 
         public Point CreateFood()
         {
-            int x = random.Next(2, mapWidht -2);
+            int x = random.Next(2, mapWidth -2);
             int y = random.Next(2,mapHeight-2);
             return new Point(x,y,sym);
         }
